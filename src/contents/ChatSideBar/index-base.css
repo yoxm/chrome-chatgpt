@@ -1,0 +1,36 @@
+:root,
+#chat-sidebar:host {
+  --sidebar-width: 420px;
+}
+
+#chat-sidebar {
+  top: 0;
+  right: 0;
+  z-index: 2147483647;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+  color: #212b36;
+  user-select: text;
+  font-weight: 400;
+  position: fixed;
+  background: #ffffff;
+
+  font-size: 14px;
+  line-height: normal;
+
+  top: 0;
+  right: 0;
+}
+
+body.chat-sidebar-show,
+body.chat-sidebar-show * {
+  max-width: calc(100vw - var(--sidebar-width));
+  overflow: hidden;
+}

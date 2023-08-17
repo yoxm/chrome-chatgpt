@@ -1,8 +1,8 @@
 {
-  "name": "hide-punchy-bulldog",
-  "displayName": "Hide punchy bulldog",
+  "name": "chat-man",
+  "displayName": "Chat Man",
   "version": "0.0.1",
-  "description": "This example demonstrates how to render a React component using content scripts",
+  "description": "",
   "author": "Yoyo",
   "scripts": {
     "dev": "plasmo dev",
@@ -10,24 +10,51 @@
     "package": "plasmo package"
   },
   "dependencies": {
-    "plasmo": "0.80.0",
+    "@ant-design/cssinjs": "^1.11.1",
+    "@ant-design/icons": "^5.1.4",
+    "@plasmohq/messaging": "^0.5.0",
+    "@plasmohq/storage": "^1.7.0",
+    "ahooks": "^3.7.8",
+    "antd": "^5.7.0",
+    "highlight.js": "^11.8.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-highlightjs": "^4.0.1",
+    "markdown-it-katex": "^2.0.3",
+    "plasmo": "0.82.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-infinite-scroll-component": "^6.1.0"
   },
   "devDependencies": {
+    "@plasmohq/prettier-plugin-sort-imports": "4.0.1",
     "@types/chrome": "0.0.241",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "prettier": "3.0.0",
-    "typescript": "5.1.6",
-    "@plasmohq/prettier-plugin-sort-imports": "4.0.1"
+    "svgo": "^3.0.2",
+    "typescript": "5.1.6"
   },
   "manifest": {
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "assets/hilightjs/default.min.css",
+          "assets/hilightjs//a11y-light.css",
+          "assets/icon*.png"
+        ],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ],
     "host_permissions": [
-      "https://*/*"
+      "<all_urls>"
     ],
     "permissions": [
+      "scripting",
+      "activeTab",
+      "identity",
       "tabs"
     ]
   }
